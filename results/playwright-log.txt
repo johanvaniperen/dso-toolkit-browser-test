@@ -1,0 +1,54 @@
+{"level":30,"time":"2024-03-05T14:06:05.371Z","pid":91385,"hostname":"joflo.localdomain","msg":"Listening on 49666"}
+(node:91385) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-03-05T14:06:06.442Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:06.442Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:06.446Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-03-05T14:06:06.681Z","pid":91385,"hostname":"joflo.localdomain","msg":"Adding browser to stack: chromium, version: 121.0.6167.57"}
+{"level":30,"time":"2024-03-05T14:06:06.681Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-03-05T14:06:06.681Z","pid":91385,"hostname":"joflo.localdomain","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-03-05T14:06:06.687Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:06.689Z","pid":91385,"hostname":"joflo.localdomain","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-03-05T14:06:06.687Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:06.689Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-03-05T14:06:06.689Z","pid":91385,"hostname":"joflo.localdomain","msg":"Trace file: "}
+{"level":30,"time":"2024-03-05T14:06:06.694Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active context"}
+{"level":30,"time":"2024-03-05T14:06:06.694Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method newContext"}
+{"level":30,"time":"2024-03-05T14:06:06.697Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-03-05T14:06:06.697Z","pid":91385,"hostname":"joflo.localdomain","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-03-05T14:06:06.951Z","pid":91385,"hostname":"joflo.localdomain","msg":"Video path: undefined"}
+{"level":30,"time":"2024-03-05T14:06:06.951Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active page"}
+{"level":30,"time":"2024-03-05T14:06:08.659Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method newPage"}
+{"level":30,"time":"2024-03-05T14:06:08.661Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getText"}
+{"level":30,"time":"2024-03-05T14:06:08.662Z","pid":91385,"hostname":"joflo.localdomain","msg":"Strict mode is disabled, return first Locator: css=[id=\"storybook-explorer-tree\"] in page."}
+{"level":30,"time":"2024-03-05T14:06:08.687Z","pid":91385,"hostname":"joflo.localdomain","msg":"Retrieved text for element css=[id=\"storybook-explorer-tree\"] containing HTML|CSS\n\n \n\nAccordion\n\n \n\nDocs\nSkip to canvas\n\n \n\ndefault\n\n \n\ncompact\n\n \n\nconclusion\n\n \n\nhandle anchors\n\n \n\nnested\n\n \n\naddonsSections\n\n \n\nalignmentSections\n\n \n\nButton\n\n \n\nCard Grid\n\n \n\nCard List\n\n \n\nCard\n\n \n\nContext\n\n \n\nDefinition List\n\n \n\nDescription\n\n \n\nDocument Header\n\n \n\nDocument List\n\n \n\nDropdown Menu\n\n \n\nFootnotes\n\n \n\nForm\n\n \n\nHighlight Box\n\n \n\nIcon\n\n \n\nImage\n\n \n\nInfo Button\n\n \n\nInfo\n\n \n\nInput Number\n\n \n\nLabel Group\n\n \n\nLink List\n\n \n\nList Button\n\n \n\nList\n\n \n\nModal\n\n \n\nNavbar\n\n \n\nPagination\n\n \n\nProgress Bar\n\n \n\nProgress Indicator\n\n \n\nRich Content\n\n \n\nRow Equal Heights\n\n \n\nSearch Bar\n\n \n\nSelectable\n\n \n\nShopping Cart\n\n \n\nTabs\n\n \n\nTile Grid\n\n \n\nTile\n\n \n\nWhitebox\n\n \n\nAlert\n\n \n\nAnchor\n\n \n\nApplication Heading\n\n \n\nAttachments Counter\n\n \n\nBadge\n\n \n\nBanner\n\n \n\nBreadcrumbs\n\n \n\nButton Row\n\n \n\nLabel\nCORE\n\n \n\nAccordion\n\n \n\nAction List\n\n \n\nAnnotation\n\n \n\nAutosuggest\n\n \n\nCard Container\n\n \n\nCard\n\n \n\nDate Picker (Legacy)\n\n \n\nDate Picker\n\n \n\nDocument Component\n\n \n\nDropdown Menu\n\n \n\nExpandable\n\n \n\nHeader\n\n \n\nHelpcenter Panel\n\n \n\nHighlight Box\n\n \n\nIcon\n\n \n\nImage Overlay\n\n \n\nInfo Button\n\n \n\nInfo\n\n \n\nList Button\n\n \n\nLogo\n\n \n\nMap Controls\n\n \n\nModal\n\n \n\nOzon Content\n\n \n\nPagination\n\n \n\nProgress Bar\n\n \n\nProgress Indicator\n\n \n\nResponsive Element\n\n \n\nScrollable\n\n \n\nSelectable\n\n \n\nSlide Toggle\n\n \n\nTable\n\n \n\nToggletip\n\n \n\nTooltip\n\n \n\nTree View\n\n \n\nViewer Grid\n\n \n\nAdvanced Select\n\n \n\nAlert\n\n \n\nAttachments Counter\n\n \n\nBadge\n\n \n\nBanner\n\n \n\nLabel\n\n \n\nMark Bar\nVOORBEELDPAGINA'S\n\n \n\nPatronen\n\n \n\nToepassingen\n\n \n\nIconen\n\n \n\nSnippets\nAngular\n\n \n\nAction List\n\n \n\nAnnotation\n\n \n\nDate Picker (Legacy)\n\n \n\nDate Picker\n\n \n\nDropdown Menu\n\n \n\nExpandable\n\n \n\nHeader\n\n \n\nHelpcenter Panel\n\n \n\nHighlight Box\n\n \n\nIcon\n\n \n\nImage Overlay\n\n \n\nInfo Button\n\n \n\nInfo\n\n \n\nList Button\n\n \n\nModal\n\n \n\nOzon Content\n\n \n\nPagination\n\n \n\nProgress Bar\n\n \n\nProgress Indicator\n\n \n\nScrollable\n\n \n\nSelectable\n\n \n\nSlide Toggle\n\n \n\nToggletip\n\n \n\nAlert\n\n \n\nAttachments Counter\n\n \n\nBadge\nReact\n\n \n\nAccordion\n\n \n\nAction List\n\n \n\nAnnotation\n\n \n\nAutosuggest\n\n \n\nCard Container\n\n \n\nCard\n\n \n\nDate Picker (Legacy)\n\n \n\nDate Picker\n\n \n\nDropdown Menu\n\n \n\nExpandable\n\n \n\nHeader\n\n \n\nHelpcenter Panel\n\n \n\nHighlight Box\n\n \n\nIcon\n\n \n\nImage Overlay\n\n \n\nInfo Button\n\n \n\nInfo\n\n \n\nList Button\n\n \n\nModal\n\n \n\nOzon Content\n\n \n\nPagination\n\n \n\nProgress Bar\n\n \n\nProgress Indicator\n\n \n\nResponsive Element\n\n \n\nScrollable\n\n \n\nSelectable\n\n \n\nSlide Toggle\n\n \n\nTable\n\n \n\nToggletip\n\n \n\nTooltip\n\n \n\nTree View\n\n \n\nAlert\n\n \n\nAttachments Counter\n\n \n\nBadge\n\n \n\nBanner\n\n \n\nLabel"}
+{"level":30,"time":"2024-03-05T14:06:08.687Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getText"}
+{"level":30,"time":"2024-03-05T14:06:08.689Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getConsoleLog"}
+{"level":30,"time":"2024-03-05T14:06:08.690Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getConsoleLog"}
+{"level":30,"time":"2024-03-05T14:06:08.694Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.695Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.696Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.696Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.697Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active context"}
+{"level":30,"time":"2024-03-05T14:06:08.697Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changing current active page: page=736b244d-080f-4758-b53e-9066561f77ab"}
+{"level":30,"time":"2024-03-05T14:06:08.697Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active page"}
+{"level":30,"time":"2024-03-05T14:06:08.705Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.705Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.706Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-03-05T14:06:08.706Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-03-05T14:06:08.708Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-03-05T14:06:08.708Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-03-05T14:06:08.709Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changing current active page: page=736b244d-080f-4758-b53e-9066561f77ab"}
+{"level":30,"time":"2024-03-05T14:06:08.709Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active page"}
+{"level":30,"time":"2024-03-05T14:06:08.711Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.712Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.713Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active context"}
+{"level":30,"time":"2024-03-05T14:06:08.713Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changing current active page: page=736b244d-080f-4758-b53e-9066561f77ab"}
+{"level":30,"time":"2024-03-05T14:06:08.713Z","pid":91385,"hostname":"joflo.localdomain","msg":"Changed active page"}
+{"level":30,"time":"2024-03-05T14:06:08.717Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-03-05T14:06:08.737Z","pid":91385,"hostname":"joflo.localdomain","msg":"Removed page=89dbfd99-30a9-4d81-8fad-5ab5d4398737 from context=d6592af4-f31f-4193-b060-7e999ada19fe page stack"}
+{"level":30,"time":"2024-03-05T14:06:08.746Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-03-05T14:06:08.749Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.749Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-03-05T14:06:08.761Z","pid":91385,"hostname":"joflo.localdomain","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-03-05T14:06:08.812Z","pid":91385,"hostname":"joflo.localdomain","msg":"End of node method closeAllBrowsers"}

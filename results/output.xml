@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-05T15:06:05.111387" rpa="false" schemaversion="5">
+<suite id="s1" name="Dso-Toolkit-Browser-Test" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test">
+<suite id="s1-s1" name="Tests" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests">
+<kw name="Init Browser" owner="browser" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-03-05T15:06:06.445233" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 15000.0, "tracesDir": "/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/results/browser/traces/09463ea7-7712-4d11-aee6-badcd9f2cdb9"}</msg>
+<msg time="2024-03-05T15:06:06.682593" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":15000,"tracesDir":"/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/results/browser/traces/09463ea7-7712-4d11-aee6-badcd9f2cdb9"}</msg>
+<arg>browser=${BROWSER_ENGINE}</arg>
+<arg>headless=${HEADLESS}</arg>
+<arg>timeout=0:00:15</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-03-05T15:06:06.444647" elapsed="0.238142"/>
+</kw>
+<doc>Initieel opzetten van de browser</doc>
+<status status="PASS" start="2024-03-05T15:06:06.444004" elapsed="0.238922"/>
+</kw>
+<suite id="s1-s1-s1" name="Storybook" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests/storybook.robot">
+<test id="s1-s1-s1-t1" name="Open Storybook" line="12">
+<kw name="Open Storybook" owner="storybook">
+<kw name="New Context" owner="Browser">
+<msg time="2024-03-05T15:06:06.688751" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "",
+  "viewport": {
+    "height": 1081,
+    "width": 1921
+  }
+}</msg>
+<msg time="2024-03-05T15:06:06.694960" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-05T15:06:06.694968" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<arg>viewport=${VIEWPORT_SIZE}</arg>
+<arg>tracing=${TRACING}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-03-05T15:06:06.688243" elapsed="0.006923"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<arg>New Page</arg>
+<arg>${STORYBOOK_URL}</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2024-03-05T15:06:06.695298" elapsed="0.001519"/>
+</kw>
+<kw name="Wait For All Promises" owner="Browser">
+<tag>Wait</tag>
+<doc>Waits for all promises to finish.</doc>
+<status status="PASS" start="2024-03-05T15:06:06.696968" elapsed="1.963244"/>
+</kw>
+<doc>Opent de storybook pagina</doc>
+<status status="PASS" start="2024-03-05T15:06:06.688037" elapsed="1.972335"/>
+</kw>
+<kw name="Explorer Tree Wordt Getoond" owner="storybook">
+<kw name="Get Text" owner="Browser">
+<msg time="2024-03-05T15:06:08.688120" level="INFO">Text: "HTML|CSS\n\n\xa0\n\nAccordion\n\n\xa0\n\nDocs\nSkip to canvas\n\n\xa0\n\ndefault\n\n\xa0\n\ncompact\n\n\xa0\n\nconclusion\n\n\xa0\n\nhandle anchors\n\n\xa0\n\nnested\n\n\xa0\n\naddonsSections\n\n\xa0\n\nalignmentSections\n\n\xa0\n\nButton\n\n\xa0\n\nCard Grid\n\n\xa0\n\nCard List\n\n\xa0\n\nCard\n\n\xa0\n\nContext\n\n\xa0\n\nDefinition List\n\n\xa0\n\nDescription\n\n\xa0\n\nDocument Header\n\n\xa0\n\nDocument List\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nFootnotes\n\n\xa0\n\nForm\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nInput Number\n\n\xa0\n\nLabel Group\n\n\xa0\n\nLink List\n\n\xa0\n\nList Button\n\n\xa0\n\nList\n\n\xa0\n\nModal\n\n\xa0\n\nNavbar\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nRich Content\n\n\xa0\n\nRow Equal Heights\n\n\xa0\n\nSearch Bar\n\n\xa0\n\nSelectable\n\n\xa0\n\nShopping Cart\n\n\xa0\n\nTabs\n\n\xa0\n\nTile Grid\n\n\xa0\n\nTile\n\n\xa0\n\nWhitebox\n\n\xa0\n\nAlert\n\n\xa0\n\nAnchor\n\n\xa0\n\nApplication Heading\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\n\n\xa0\n\nBanner\n\n\xa0\n\nBreadcrumbs\n\n\xa0\n\nButton Row\n\n\xa0\n\nLabel\nCORE\n\n\xa0\n\nAccordion\n\n\xa0\n\nAction List\n\n\xa0\n\nAnnotation\n\n\xa0\n\nAutosuggest\n\n\xa0\n\nCard Container\n\n\xa0\n\nCard\n\n\xa0\n\nDate Picker (Legacy)\n\n\xa0\n\nDate Picker\n\n\xa0\n\nDocument Component\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nExpandable\n\n\xa0\n\nHeader\n\n\xa0\n\nHelpcenter Panel\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage Overlay\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nList Button\n\n\xa0\n\nLogo\n\n\xa0\n\nMap Controls\n\n\xa0\n\nModal\n\n\xa0\n\nOzon Content\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nResponsive Element\n\n\xa0\n\nScrollable\n\n\xa0\n\nSelectable\n\n\xa0\n\nSlide Toggle\n\n\xa0\n\nTable\n\n\xa0\n\nToggletip\n\n\xa0\n\nTooltip\n\n\xa0\n\nTree View\n\n\xa0\n\nViewer Grid\n\n\xa0\n\nAdvanced Select\n\n\xa0\n\nAlert\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\n\n\xa0\n\nBanner\n\n\xa0\n\nLabel\n\n\xa0\n\nMark Bar\nVOORBEELDPAGINA'S\n\n\xa0\n\nPatronen\n\n\xa0\n\nToepassingen\n\n\xa0\n\nIconen\n\n\xa0\n\nSnippets\nAngular\n\n\xa0\n\nAction List\n\n\xa0\n\nAnnotation\n\n\xa0\n\nDate Picker (Legacy)\n\n\xa0\n\nDate Picker\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nExpandable\n\n\xa0\n\nHeader\n\n\xa0\n\nHelpcenter Panel\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage Overlay\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nList Button\n\n\xa0\n\nModal\n\n\xa0\n\nOzon Content\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nScrollable\n\n\xa0\n\nSelectable\n\n\xa0\n\nSlide Toggle\n\n\xa0\n\nToggletip\n\n\xa0\n\nAlert\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\nReact\n\n\xa0\n\nAccordion\n\n\xa0\n\nAction List\n\n\xa0\n\nAnnotation\n\n\xa0\n\nAutosuggest\n\n\xa0\n\nCard Container\n\n\xa0\n\nCard\n\n\xa0\n\nDate Picker (Legacy)\n\n\xa0\n\nDate Picker\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nExpandable\n\n\xa0\n\nHeader\n\n\xa0\n\nHelpcenter Panel\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage Overlay\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nList Button\n\n\xa0\n\nModal\n\n\xa0\n\nOzon Content\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nResponsive Element\n\n\xa0\n\nScrollable\n\n\xa0\n\nSelectable\n\n\xa0\n\nSlide Toggle\n\n\xa0\n\nTable\n\n\xa0\n\nToggletip\n\n\xa0\n\nTooltip\n\n\xa0\n\nTree View\n\n\xa0\n\nAlert\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\n\n\xa0\n\nBanner\n\n\xa0\n\nLabel"</msg>
+<arg>${PO_EXPLORER_TREE}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-05T15:06:08.660819" elapsed="0.027482"/>
+</kw>
+<doc>Verifeer Explorer Tree</doc>
+<status status="PASS" start="2024-03-05T15:06:08.660580" elapsed="0.027835"/>
+</kw>
+<kw name="Teardown Browser" owner="browser" type="TEARDOWN">
+<kw name="Get Console Log" owner="Browser">
+<msg time="2024-03-05T15:06:08.690502" level="INFO">Console log received</msg>
+<msg time="2024-03-05T15:06:08.690682" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<var>${console_log}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns the console log of the active page.</doc>
+<status status="PASS" start="2024-03-05T15:06:08.689019" elapsed="0.001762"/>
+</kw>
+<if>
+<branch type="IF" condition="$console_log">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-05T15:06:08.691305" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-05T14:06:07.614Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.898Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.904Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.932Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.933Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.934Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.945Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-05T14:06:08.222Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-05T14:06:08.223Z'}]</msg>
+<arg>console log output: ${console_log}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-05T15:06:08.691117" elapsed="0.000272"/>
+</kw>
+<status status="PASS" start="2024-03-05T15:06:08.690885" elapsed="0.000549"/>
+</branch>
+<status status="PASS" start="2024-03-05T15:06:08.690867" elapsed="0.000599"/>
+</if>
+<doc>Algemene Test Teardown</doc>
+<status status="PASS" start="2024-03-05T15:06:08.688787" elapsed="0.002704"/>
+</kw>
+<doc>Open storybook en valideeer titel</doc>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2024-03-05T15:06:06.687694" elapsed="2.003932"/>
+</test>
+<doc>algehele import iets</doc>
+<status status="PASS" start="2024-03-05T15:06:06.682993" elapsed="2.010599"/>
+</suite>
+<doc>Alkgemene setttings voor suite setup en teardown</doc>
+<status status="PASS" start="2024-03-05T15:06:05.138983" elapsed="3.608650"/>
+</suite>
+<status status="PASS" start="2024-03-05T15:06:05.119856" elapsed="3.630192"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Dso-Toolkit-Browser-Test">Dso-Toolkit-Browser-Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Dso-Toolkit-Browser-Test.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Storybook">Dso-Toolkit-Browser-Test.Tests.Storybook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

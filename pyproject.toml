@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dso-toolkit-browser-test"
+version = "0.1.0"
+description = "Browser testen voor dso-toolkit"
+authors = ["Johan van Iperen <johan.vaniperen@kadaster.nl>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+robotframework = "^7.0"
+robotframework-browser = "^18.2.0"
+robotframework-robocop = "^5.0.3"
+robotframework-tidy = "^4.10.0"
+robotframework-imagecompare = {git = "ssh://git@github.com/johanvaniperen/robotframework-imagecompare.git"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
