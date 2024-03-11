@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-05T15:06:05.111387" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-11T11:53:49.600125" rpa="false" schemaversion="5">
 <suite id="s1" name="Dso-Toolkit-Browser-Test" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test">
 <suite id="s1-s1" name="Tests" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests">
 <kw name="Init Browser" owner="browser" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-03-05T15:06:06.445233" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 15000.0, "tracesDir": "/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/results/browser/traces/09463ea7-7712-4d11-aee6-badcd9f2cdb9"}</msg>
-<msg time="2024-03-05T15:06:06.682593" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":15000,"tracesDir":"/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/results/browser/traces/09463ea7-7712-4d11-aee6-badcd9f2cdb9"}</msg>
+<msg time="2024-03-11T11:53:50.929200" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 15000.0, "tracesDir": "/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/results/browser/traces/6ec34335-aeb1-406c-a6d0-74105ab0b2ec"}</msg>
+<msg time="2024-03-11T11:53:51.252009" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":15000,"tracesDir":"/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/results/browser/traces/6ec34335-aeb1-406c-a6d0-74105ab0b2ec"}</msg>
 <arg>browser=${BROWSER_ENGINE}</arg>
 <arg>headless=${HEADLESS}</arg>
 <arg>timeout=0:00:15</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-03-05T15:06:06.444647" elapsed="0.238142"/>
+<status status="PASS" start="2024-03-11T11:53:50.928655" elapsed="0.323568"/>
 </kw>
 <doc>Initieel opzetten van de browser</doc>
-<status status="PASS" start="2024-03-05T15:06:06.444004" elapsed="0.238922"/>
+<status status="PASS" start="2024-03-11T11:53:50.928086" elapsed="0.324283"/>
 </kw>
-<suite id="s1-s1-s1" name="Storybook" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests/storybook.robot">
-<test id="s1-s1-s1-t1" name="Open Storybook" line="12">
-<kw name="Open Storybook" owner="storybook">
+<suite id="s1-s1-s1" name="Storybook Image Compare Dd" source="/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests/storybook_image_compare_dd.robot">
+<test id="s1-s1-s1-t1" name="Visual active-modal" line="21">
+<kw name="Open Storybook" owner="storybook" type="SETUP">
 <kw name="New Context" owner="Browser">
-<msg time="2024-03-05T15:06:06.688751" level="INFO">{
+<msg time="2024-03-11T11:53:51.766552" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -36,93 +36,1667 @@
     "width": 1921
   }
 }</msg>
-<msg time="2024-03-05T15:06:06.694960" level="INFO">Successfully created context. </msg>
-<msg time="2024-03-05T15:06:06.694968" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<msg time="2024-03-11T11:53:51.772663" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-11T11:53:51.772669" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
 <arg>viewport=${VIEWPORT_SIZE}</arg>
 <arg>tracing=${TRACING}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2024-03-05T15:06:06.688243" elapsed="0.006923"/>
+<status status="PASS" start="2024-03-11T11:53:51.766113" elapsed="0.006780"/>
 </kw>
 <kw name="Promise To" owner="Browser">
 <arg>New Page</arg>
 <arg>${STORYBOOK_URL}</arg>
 <tag>Wait</tag>
 <doc>Wrap a Browser library keyword and make it a promise.</doc>
-<status status="PASS" start="2024-03-05T15:06:06.695298" elapsed="0.001519"/>
+<status status="PASS" start="2024-03-11T11:53:51.773026" elapsed="0.000944"/>
 </kw>
 <kw name="Wait For All Promises" owner="Browser">
 <tag>Wait</tag>
 <doc>Waits for all promises to finish.</doc>
-<status status="PASS" start="2024-03-05T15:06:06.696968" elapsed="1.963244"/>
+<status status="PASS" start="2024-03-11T11:53:51.774080" elapsed="2.420459"/>
 </kw>
 <doc>Opent de storybook pagina</doc>
-<status status="PASS" start="2024-03-05T15:06:06.688037" elapsed="1.972335"/>
+<status status="PASS" start="2024-03-11T11:53:51.765911" elapsed="2.428798"/>
 </kw>
-<kw name="Explorer Tree Wordt Getoond" owner="storybook">
+<kw name="Explore Tree And Compare Image">
+<kw name="Navigeer In Explorer Tree" owner="storybook">
+<variable name="${css_sub_path}">
+<var>${PO_EXPLORER_TREE}</var>
+<status status="PASS" start="2024-03-11T11:53:54.195473" elapsed="0.000161"/>
+</variable>
+<variable name="${data_id}">
+<var>${EMPTY}</var>
+<status status="PASS" start="2024-03-11T11:53:54.195746" elapsed="0.000310"/>
+</variable>
+<for flavor="IN">
+<iter>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:53:54.222036" level="INFO">Attribute is: 'false'</msg>
+<msg time="2024-03-11T11:53:54.222229" level="INFO">${uitgeklapt} = false</msg>
+<var>${uitgeklapt}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>aria-expanded</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.196425" elapsed="0.025850"/>
+</kw>
+<if>
+<branch type="IF" condition="$uitgeklapt == 'false'">
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.222734" elapsed="0.170047"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:53:54.222417" elapsed="0.170499"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:53:54.222399" elapsed="0.170561"/>
+</if>
+<variable name="${css_sub_path}">
+<var>${css_sub_path}${SPACE}button:text-is("${stap}")</var>
+<status status="PASS" start="2024-03-11T11:53:54.392997" elapsed="0.000181"/>
+</variable>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:53:54.403650" level="INFO">Attribute is: 'html-css-modal'</msg>
+<msg time="2024-03-11T11:53:54.403815" level="INFO">${item_data_id} = html-css-modal</msg>
+<var>${item_data_id}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>data-item-id</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.393276" elapsed="0.010579"/>
+</kw>
+<var name="${stap}">Modal</var>
+<status status="PASS" start="2024-03-11T11:53:54.196292" elapsed="0.207659"/>
+</iter>
+<var>${stap}</var>
+<value>@{boom}</value>
+<status status="PASS" start="2024-03-11T11:53:54.196114" elapsed="0.207894"/>
+</for>
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.404119" elapsed="0.297336"/>
+</kw>
+<arg>${item}</arg>
+<arg>@{explorer_tree}</arg>
+<doc>Navigeer in storybook tree</doc>
+<status status="PASS" start="2024-03-11T11:53:54.195282" elapsed="0.506303"/>
+</kw>
+<kw name="Vergelijk Afbeelding" owner="image_compare">
+<kw name="Replace Spaces And Encode To ASCII" owner="general">
+<kw name="Replace String" owner="String">
+<msg time="2024-03-11T11:53:54.702475" level="INFO">${string_output} = active-modal</msg>
+<var>${string_output}</var>
+<arg>${string_input}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.702331" elapsed="0.000213"/>
+</kw>
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2024-03-11T11:53:54.702760" level="INFO">${string_output} = active-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<arg>errors=replace</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.702624" elapsed="0.000173"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2024-03-11T11:53:54.702980" level="INFO">${string_output} = active-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.702867" elapsed="0.000152"/>
+</kw>
+<return>
+<value>${string_output}</value>
+<status status="PASS" start="2024-03-11T11:53:54.703066" elapsed="0.000065"/>
+</return>
+<msg time="2024-03-11T11:53:54.703205" level="INFO">${image_test_id} = active-modal</msg>
+<var>${image_test_id}</var>
+<arg>${image_test_id}</arg>
+<doc>Maakt strings tot namen die gebruikt kunnen worden in bijvoorbeeld Path namen</doc>
+<status status="PASS" start="2024-03-11T11:53:54.702175" elapsed="0.001065"/>
+</kw>
+<if>
+<branch type="IF" condition="$image_index">
+<variable name="${image_path}">
+<var>${image_test_id}_${image_index}.png</var>
+<status status="PASS" start="2024-03-11T11:53:54.703617" elapsed="0.000098"/>
+</variable>
+<status status="PASS" start="2024-03-11T11:53:54.703432" elapsed="0.000320"/>
+</branch>
+<branch type="ELSE">
+<variable name="${image_path}">
+<var>${image_test_id}.png</var>
+<status status="NOT RUN" start="2024-03-11T11:53:54.703821" elapsed="0.000029"/>
+</variable>
+<status status="NOT RUN" start="2024-03-11T11:53:54.703776" elapsed="0.000101"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:53:54.703410" elapsed="0.000486"/>
+</if>
+<variable name="${image_reference_path}">
+<var>${REFERENCE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:53:54.703911" elapsed="0.000068"/>
+</variable>
+<variable name="${image_candidate_path}">
+<var>${CANDIDATE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:53:54.704009" elapsed="0.000057"/>
+</variable>
 <kw name="Get Text" owner="Browser">
-<msg time="2024-03-05T15:06:08.688120" level="INFO">Text: "HTML|CSS\n\n\xa0\n\nAccordion\n\n\xa0\n\nDocs\nSkip to canvas\n\n\xa0\n\ndefault\n\n\xa0\n\ncompact\n\n\xa0\n\nconclusion\n\n\xa0\n\nhandle anchors\n\n\xa0\n\nnested\n\n\xa0\n\naddonsSections\n\n\xa0\n\nalignmentSections\n\n\xa0\n\nButton\n\n\xa0\n\nCard Grid\n\n\xa0\n\nCard List\n\n\xa0\n\nCard\n\n\xa0\n\nContext\n\n\xa0\n\nDefinition List\n\n\xa0\n\nDescription\n\n\xa0\n\nDocument Header\n\n\xa0\n\nDocument List\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nFootnotes\n\n\xa0\n\nForm\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nInput Number\n\n\xa0\n\nLabel Group\n\n\xa0\n\nLink List\n\n\xa0\n\nList Button\n\n\xa0\n\nList\n\n\xa0\n\nModal\n\n\xa0\n\nNavbar\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nRich Content\n\n\xa0\n\nRow Equal Heights\n\n\xa0\n\nSearch Bar\n\n\xa0\n\nSelectable\n\n\xa0\n\nShopping Cart\n\n\xa0\n\nTabs\n\n\xa0\n\nTile Grid\n\n\xa0\n\nTile\n\n\xa0\n\nWhitebox\n\n\xa0\n\nAlert\n\n\xa0\n\nAnchor\n\n\xa0\n\nApplication Heading\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\n\n\xa0\n\nBanner\n\n\xa0\n\nBreadcrumbs\n\n\xa0\n\nButton Row\n\n\xa0\n\nLabel\nCORE\n\n\xa0\n\nAccordion\n\n\xa0\n\nAction List\n\n\xa0\n\nAnnotation\n\n\xa0\n\nAutosuggest\n\n\xa0\n\nCard Container\n\n\xa0\n\nCard\n\n\xa0\n\nDate Picker (Legacy)\n\n\xa0\n\nDate Picker\n\n\xa0\n\nDocument Component\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nExpandable\n\n\xa0\n\nHeader\n\n\xa0\n\nHelpcenter Panel\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage Overlay\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nList Button\n\n\xa0\n\nLogo\n\n\xa0\n\nMap Controls\n\n\xa0\n\nModal\n\n\xa0\n\nOzon Content\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nResponsive Element\n\n\xa0\n\nScrollable\n\n\xa0\n\nSelectable\n\n\xa0\n\nSlide Toggle\n\n\xa0\n\nTable\n\n\xa0\n\nToggletip\n\n\xa0\n\nTooltip\n\n\xa0\n\nTree View\n\n\xa0\n\nViewer Grid\n\n\xa0\n\nAdvanced Select\n\n\xa0\n\nAlert\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\n\n\xa0\n\nBanner\n\n\xa0\n\nLabel\n\n\xa0\n\nMark Bar\nVOORBEELDPAGINA'S\n\n\xa0\n\nPatronen\n\n\xa0\n\nToepassingen\n\n\xa0\n\nIconen\n\n\xa0\n\nSnippets\nAngular\n\n\xa0\n\nAction List\n\n\xa0\n\nAnnotation\n\n\xa0\n\nDate Picker (Legacy)\n\n\xa0\n\nDate Picker\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nExpandable\n\n\xa0\n\nHeader\n\n\xa0\n\nHelpcenter Panel\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage Overlay\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nList Button\n\n\xa0\n\nModal\n\n\xa0\n\nOzon Content\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nScrollable\n\n\xa0\n\nSelectable\n\n\xa0\n\nSlide Toggle\n\n\xa0\n\nToggletip\n\n\xa0\n\nAlert\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\nReact\n\n\xa0\n\nAccordion\n\n\xa0\n\nAction List\n\n\xa0\n\nAnnotation\n\n\xa0\n\nAutosuggest\n\n\xa0\n\nCard Container\n\n\xa0\n\nCard\n\n\xa0\n\nDate Picker (Legacy)\n\n\xa0\n\nDate Picker\n\n\xa0\n\nDropdown Menu\n\n\xa0\n\nExpandable\n\n\xa0\n\nHeader\n\n\xa0\n\nHelpcenter Panel\n\n\xa0\n\nHighlight Box\n\n\xa0\n\nIcon\n\n\xa0\n\nImage Overlay\n\n\xa0\n\nInfo Button\n\n\xa0\n\nInfo\n\n\xa0\n\nList Button\n\n\xa0\n\nModal\n\n\xa0\n\nOzon Content\n\n\xa0\n\nPagination\n\n\xa0\n\nProgress Bar\n\n\xa0\n\nProgress Indicator\n\n\xa0\n\nResponsive Element\n\n\xa0\n\nScrollable\n\n\xa0\n\nSelectable\n\n\xa0\n\nSlide Toggle\n\n\xa0\n\nTable\n\n\xa0\n\nToggletip\n\n\xa0\n\nTooltip\n\n\xa0\n\nTree View\n\n\xa0\n\nAlert\n\n\xa0\n\nAttachments Counter\n\n\xa0\n\nBadge\n\n\xa0\n\nBanner\n\n\xa0\n\nLabel"</msg>
-<arg>${PO_EXPLORER_TREE}</arg>
+<msg time="2024-03-11T11:53:54.772259" level="INFO">Text: 'Verwijderen werkzaamheid\nSluiten\nAnnuleren\nSecundaire actie Bevestigen'</msg>
+<arg>${selector}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2024-03-05T15:06:08.660819" elapsed="0.027482"/>
+<status status="PASS" start="2024-03-11T11:53:54.704148" elapsed="0.068270"/>
 </kw>
-<doc>Verifeer Explorer Tree</doc>
-<status status="PASS" start="2024-03-05T15:06:08.660580" elapsed="0.027835"/>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2024-03-11T11:53:54.772946" level="INFO">Waiting page load to state to receive load in 15000.0</msg>
+<msg time="2024-03-11T11:53:54.774885" level="INFO">Load state load got in 15000</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.772579" elapsed="0.002440"/>
+</kw>
+<if>
+<branch type="IF" condition="$REFERENCE_RUN">
+<kw name="Take Screenshot" owner="Browser">
+<arg>${image_reference_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-03-11T11:53:54.775309" elapsed="0.000054"/>
+</kw>
+<status status="NOT RUN" start="2024-03-11T11:53:54.775114" elapsed="0.000293"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-03-11T11:53:55.085995" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../data/image-compare/candidate/active-modal_dialog.png" target="_blank"&gt;&lt;img src="../data/image-compare/candidate/active-modal_dialog.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>${image_candidate_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-03-11T11:53:54.775505" elapsed="0.310722"/>
+</kw>
+<kw name="Compare Images" owner="ImageCompare">
+<msg time="2024-03-11T11:53:55.092538" level="INFO">Compare Image Object created in 0.0018 seconds
+Compare Image Object created in 0.0024 seconds</msg>
+<msg time="2024-03-11T11:53:55.092546" level="INFO" html="true">&lt;a href='screenshots/a7a6a164-df95-11ee-9e31-ea08b229c9f1_reference_page_1.jpg' target='_blank'&gt;&lt;img src='screenshots/a7a6a164-df95-11ee-9e31-ea08b229c9f1_reference_page_1.jpg' style='width:50%; height: auto;'/&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-11T11:53:55.092548" level="INFO" html="true">&lt;a href='screenshots/a7a6d3be-df95-11ee-9e31-ea08b229c9f1_candidate_page_1.jpg' target='_blank'&gt;&lt;img src='screenshots/a7a6d3be-df95-11ee-9e31-ea08b229c9f1_candidate_page_1.jpg' style='width:50%; height: auto;'/&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-11T11:53:55.092810" level="FAIL">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</msg>
+<arg>${image_reference_path}</arg>
+<arg>${image_candidate_path}</arg>
+<arg>threshold=${Threshold}</arg>
+<doc>Compares the documents/images ``reference_image`` and ``test_image``.</doc>
+<status status="FAIL" start="2024-03-11T11:53:55.086435" elapsed="0.007589">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</status>
+</kw>
+<status status="FAIL" start="2024-03-11T11:53:54.775431" elapsed="0.318728">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</status>
+</branch>
+<status status="FAIL" start="2024-03-11T11:53:54.775100" elapsed="0.319101">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</status>
+</if>
+<arg>${naam}</arg>
+<arg>${image_selector}</arg>
+<doc>Dit keyword schrijft screenshots weg in de 'actual' directory.
+iets</doc>
+<status status="FAIL" start="2024-03-11T11:53:54.701762" elapsed="0.392507">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</status>
+</kw>
+<arg>active-modal</arg>
+<arg>dialog</arg>
+<arg>active</arg>
+<arg>Modal</arg>
+<doc>Open boom en vergelijk</doc>
+<status status="FAIL" start="2024-03-11T11:53:54.194930" elapsed="0.899424">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</status>
 </kw>
 <kw name="Teardown Browser" owner="browser" type="TEARDOWN">
 <kw name="Get Console Log" owner="Browser">
-<msg time="2024-03-05T15:06:08.690502" level="INFO">Console log received</msg>
-<msg time="2024-03-05T15:06:08.690682" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<msg time="2024-03-11T11:53:55.096792" level="INFO">Console log received</msg>
+<msg time="2024-03-11T11:53:55.096948" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
 <var>${console_log}</var>
 <tag>Assertion</tag>
 <tag>BrowserControl</tag>
 <tag>Getter</tag>
 <doc>Returns the console log of the active page.</doc>
-<status status="PASS" start="2024-03-05T15:06:08.689019" elapsed="0.001762"/>
+<status status="PASS" start="2024-03-11T11:53:55.094817" elapsed="0.002211"/>
 </kw>
 <if>
 <branch type="IF" condition="$console_log">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-03-05T15:06:08.691305" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-05T14:06:07.614Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.898Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.904Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.932Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.933Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.934Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-05T14:06:07.945Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-05T14:06:08.222Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-05T14:06:08.223Z'}]</msg>
+<msg time="2024-03-11T11:53:55.097473" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-11T10:53:53.157Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:53.441Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:53.490Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:53.530Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:53.530Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:53.531Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:53.542Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:53:53.752Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:53:53.752Z'}]</msg>
 <arg>console log output: ${console_log}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-05T15:06:08.691117" elapsed="0.000272"/>
+<status status="PASS" start="2024-03-11T11:53:55.097295" elapsed="0.000302"/>
 </kw>
-<status status="PASS" start="2024-03-05T15:06:08.690885" elapsed="0.000549"/>
+<status status="PASS" start="2024-03-11T11:53:55.097126" elapsed="0.000515"/>
 </branch>
-<status status="PASS" start="2024-03-05T15:06:08.690867" elapsed="0.000599"/>
+<status status="PASS" start="2024-03-11T11:53:55.097113" elapsed="0.000556"/>
 </if>
 <doc>Algemene Test Teardown</doc>
-<status status="PASS" start="2024-03-05T15:06:08.688787" elapsed="0.002704"/>
+<status status="PASS" start="2024-03-11T11:53:55.094606" elapsed="0.003086"/>
 </kw>
-<doc>Open storybook en valideeer titel</doc>
 <timeout value="5 minutes"/>
-<status status="PASS" start="2024-03-05T15:06:06.687694" elapsed="2.003932"/>
+<status status="FAIL" start="2024-03-11T11:53:51.765307" elapsed="3.332467">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(295, 641, 3)</status>
+</test>
+<test id="s1-s1-s1-t2" name="Visual passive-modal" line="22">
+<kw name="Open Storybook" owner="storybook" type="SETUP">
+<kw name="New Context" owner="Browser">
+<msg time="2024-03-11T11:53:55.100580" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "",
+  "viewport": {
+    "height": 1081,
+    "width": 1921
+  }
+}</msg>
+<msg time="2024-03-11T11:53:55.104918" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-11T11:53:55.104929" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<arg>viewport=${VIEWPORT_SIZE}</arg>
+<arg>tracing=${TRACING}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-03-11T11:53:55.100169" elapsed="0.004966"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<arg>New Page</arg>
+<arg>${STORYBOOK_URL}</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2024-03-11T11:53:55.105279" elapsed="0.013252"/>
+</kw>
+<kw name="Wait For All Promises" owner="Browser">
+<tag>Wait</tag>
+<doc>Waits for all promises to finish.</doc>
+<status status="PASS" start="2024-03-11T11:53:55.118701" elapsed="2.002246"/>
+</kw>
+<doc>Opent de storybook pagina</doc>
+<status status="PASS" start="2024-03-11T11:53:55.099975" elapsed="2.021119"/>
+</kw>
+<kw name="Explore Tree And Compare Image">
+<kw name="Navigeer In Explorer Tree" owner="storybook">
+<variable name="${css_sub_path}">
+<var>${PO_EXPLORER_TREE}</var>
+<status status="PASS" start="2024-03-11T11:53:57.121951" elapsed="0.000078"/>
+</variable>
+<variable name="${data_id}">
+<var>${EMPTY}</var>
+<status status="PASS" start="2024-03-11T11:53:57.122071" elapsed="0.000205"/>
+</variable>
+<for flavor="IN">
+<iter>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:53:57.145168" level="INFO">Attribute is: 'false'</msg>
+<msg time="2024-03-11T11:53:57.145357" level="INFO">${uitgeklapt} = false</msg>
+<var>${uitgeklapt}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>aria-expanded</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.122531" elapsed="0.022869"/>
+</kw>
+<if>
+<branch type="IF" condition="$uitgeklapt == 'false'">
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.145836" elapsed="0.161299"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:53:57.145550" elapsed="0.161706"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:53:57.145531" elapsed="0.161763"/>
+</if>
+<variable name="${css_sub_path}">
+<var>${css_sub_path}${SPACE}button:text-is("${stap}")</var>
+<status status="PASS" start="2024-03-11T11:53:57.307323" elapsed="0.000171"/>
+</variable>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:53:57.316891" level="INFO">Attribute is: 'html-css-modal'</msg>
+<msg time="2024-03-11T11:53:57.317068" level="INFO">${item_data_id} = html-css-modal</msg>
+<var>${item_data_id}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>data-item-id</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.307586" elapsed="0.009523"/>
+</kw>
+<var name="${stap}">Modal</var>
+<status status="PASS" start="2024-03-11T11:53:57.122442" elapsed="0.194762"/>
+</iter>
+<var>${stap}</var>
+<value>@{boom}</value>
+<status status="PASS" start="2024-03-11T11:53:57.122333" elapsed="0.194916"/>
+</for>
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.317340" elapsed="0.300311"/>
+</kw>
+<arg>${item}</arg>
+<arg>@{explorer_tree}</arg>
+<doc>Navigeer in storybook tree</doc>
+<status status="PASS" start="2024-03-11T11:53:57.121770" elapsed="0.496093"/>
+</kw>
+<kw name="Vergelijk Afbeelding" owner="image_compare">
+<kw name="Replace Spaces And Encode To ASCII" owner="general">
+<kw name="Replace String" owner="String">
+<msg time="2024-03-11T11:53:57.618888" level="INFO">${string_output} = passive-modal</msg>
+<var>${string_output}</var>
+<arg>${string_input}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.618731" elapsed="0.000229"/>
+</kw>
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2024-03-11T11:53:57.619178" level="INFO">${string_output} = passive-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<arg>errors=replace</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.619037" elapsed="0.000183"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2024-03-11T11:53:57.619398" level="INFO">${string_output} = passive-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.619291" elapsed="0.000138"/>
+</kw>
+<return>
+<value>${string_output}</value>
+<status status="PASS" start="2024-03-11T11:53:57.619474" elapsed="0.000053"/>
+</return>
+<msg time="2024-03-11T11:53:57.619585" level="INFO">${image_test_id} = passive-modal</msg>
+<var>${image_test_id}</var>
+<arg>${image_test_id}</arg>
+<doc>Maakt strings tot namen die gebruikt kunnen worden in bijvoorbeeld Path namen</doc>
+<status status="PASS" start="2024-03-11T11:53:57.618564" elapsed="0.001054"/>
+</kw>
+<if>
+<branch type="IF" condition="$image_index">
+<variable name="${image_path}">
+<var>${image_test_id}_${image_index}.png</var>
+<status status="PASS" start="2024-03-11T11:53:57.619778" elapsed="0.000079"/>
+</variable>
+<status status="PASS" start="2024-03-11T11:53:57.619676" elapsed="0.000207"/>
+</branch>
+<branch type="ELSE">
+<variable name="${image_path}">
+<var>${image_test_id}.png</var>
+<status status="NOT RUN" start="2024-03-11T11:53:57.619940" elapsed="0.000027"/>
+</variable>
+<status status="NOT RUN" start="2024-03-11T11:53:57.619902" elapsed="0.000086"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:53:57.619666" elapsed="0.000339"/>
+</if>
+<variable name="${image_reference_path}">
+<var>${REFERENCE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:53:57.620018" elapsed="0.000059"/>
+</variable>
+<variable name="${image_candidate_path}">
+<var>${CANDIDATE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:53:57.620102" elapsed="0.000054"/>
+</variable>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-03-11T11:53:57.689218" level="INFO">Text: 'Bestandsformaten\nSluiten\nSluiten'</msg>
+<arg>${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.620211" elapsed="0.069315"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2024-03-11T11:53:57.690300" level="INFO">Waiting page load to state to receive load in 15000.0</msg>
+<msg time="2024-03-11T11:53:57.691500" level="INFO">Load state load got in 15000</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.689759" elapsed="0.001868"/>
+</kw>
+<if>
+<branch type="IF" condition="$REFERENCE_RUN">
+<kw name="Take Screenshot" owner="Browser">
+<arg>${image_reference_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-03-11T11:53:57.691906" elapsed="0.000059"/>
+</kw>
+<status status="NOT RUN" start="2024-03-11T11:53:57.691730" elapsed="0.000278"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-03-11T11:53:57.847354" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../data/image-compare/candidate/passive-modal_dialog.png" target="_blank"&gt;&lt;img src="../data/image-compare/candidate/passive-modal_dialog.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>${image_candidate_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.692105" elapsed="0.155458"/>
+</kw>
+<kw name="Compare Images" owner="ImageCompare">
+<msg time="2024-03-11T11:53:57.857725" level="INFO">Compare Image Object created in 0.0011 seconds
+Compare Image Object created in 0.0013 seconds
+The compared images are equal
+Visual Image comparison performed in 0.0075 seconds</msg>
+<arg>${image_reference_path}</arg>
+<arg>${image_candidate_path}</arg>
+<arg>threshold=${Threshold}</arg>
+<doc>Compares the documents/images ``reference_image`` and ``test_image``.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.847777" elapsed="0.010104"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:53:57.692033" elapsed="0.165941"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:53:57.691715" elapsed="0.166290"/>
+</if>
+<arg>${naam}</arg>
+<arg>${image_selector}</arg>
+<doc>Dit keyword schrijft screenshots weg in de 'actual' directory.
+iets</doc>
+<status status="PASS" start="2024-03-11T11:53:57.618065" elapsed="0.239973"/>
+</kw>
+<arg>passive-modal</arg>
+<arg>dialog</arg>
+<arg>passive</arg>
+<arg>Modal</arg>
+<doc>Open boom en vergelijk</doc>
+<status status="PASS" start="2024-03-11T11:53:57.121393" elapsed="0.736704"/>
+</kw>
+<kw name="Teardown Browser" owner="browser" type="TEARDOWN">
+<kw name="Get Console Log" owner="Browser">
+<msg time="2024-03-11T11:53:57.861187" level="INFO">Console log received</msg>
+<msg time="2024-03-11T11:53:57.861397" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<var>${console_log}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns the console log of the active page.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.858992" elapsed="0.002458"/>
+</kw>
+<if>
+<branch type="IF" condition="$console_log">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-11T11:53:57.862065" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-11T10:53:56.153Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:56.443Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:56.492Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:56.526Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:56.526Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:56.534Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:56.546Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:53:56.686Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:53:56.686Z'}]</msg>
+<arg>console log output: ${console_log}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.861828" elapsed="0.000398"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:53:57.861574" elapsed="0.000703"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:53:57.861557" elapsed="0.000748"/>
+</if>
+<doc>Algemene Test Teardown</doc>
+<status status="PASS" start="2024-03-11T11:53:57.858472" elapsed="0.003864"/>
+</kw>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2024-03-11T11:53:55.099404" elapsed="2.763113"/>
+</test>
+<test id="s1-s1-s1-t3" name="Visual confirm-modal" line="23">
+<kw name="Open Storybook" owner="storybook" type="SETUP">
+<kw name="New Context" owner="Browser">
+<msg time="2024-03-11T11:53:57.865613" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "",
+  "viewport": {
+    "height": 1081,
+    "width": 1921
+  }
+}</msg>
+<msg time="2024-03-11T11:53:57.870247" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-11T11:53:57.870254" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<arg>viewport=${VIEWPORT_SIZE}</arg>
+<arg>tracing=${TRACING}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.865104" elapsed="0.005364"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<arg>New Page</arg>
+<arg>${STORYBOOK_URL}</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.870633" elapsed="0.013316"/>
+</kw>
+<kw name="Wait For All Promises" owner="Browser">
+<tag>Wait</tag>
+<doc>Waits for all promises to finish.</doc>
+<status status="PASS" start="2024-03-11T11:53:57.884246" elapsed="2.307188"/>
+</kw>
+<doc>Opent de storybook pagina</doc>
+<status status="PASS" start="2024-03-11T11:53:57.864792" elapsed="2.326793"/>
+</kw>
+<kw name="Explore Tree And Compare Image">
+<kw name="Navigeer In Explorer Tree" owner="storybook">
+<variable name="${css_sub_path}">
+<var>${PO_EXPLORER_TREE}</var>
+<status status="PASS" start="2024-03-11T11:54:00.192308" elapsed="0.000076"/>
+</variable>
+<variable name="${data_id}">
+<var>${EMPTY}</var>
+<status status="PASS" start="2024-03-11T11:54:00.192423" elapsed="0.000206"/>
+</variable>
+<for flavor="IN">
+<iter>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:00.214606" level="INFO">Attribute is: 'false'</msg>
+<msg time="2024-03-11T11:54:00.214761" level="INFO">${uitgeklapt} = false</msg>
+<var>${uitgeklapt}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>aria-expanded</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.192880" elapsed="0.021919"/>
+</kw>
+<if>
+<branch type="IF" condition="$uitgeklapt == 'false'">
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.215248" elapsed="0.194530"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:00.214916" elapsed="0.194997"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:00.214902" elapsed="0.195045"/>
+</if>
+<variable name="${css_sub_path}">
+<var>${css_sub_path}${SPACE}button:text-is("${stap}")</var>
+<status status="PASS" start="2024-03-11T11:54:00.409976" elapsed="0.000207"/>
+</variable>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:00.422547" level="INFO">Attribute is: 'html-css-modal'</msg>
+<msg time="2024-03-11T11:54:00.422703" level="INFO">${item_data_id} = html-css-modal</msg>
+<var>${item_data_id}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>data-item-id</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.410318" elapsed="0.012424"/>
+</kw>
+<var name="${stap}">Modal</var>
+<status status="PASS" start="2024-03-11T11:54:00.192791" elapsed="0.230040"/>
+</iter>
+<var>${stap}</var>
+<value>@{boom}</value>
+<status status="PASS" start="2024-03-11T11:54:00.192674" elapsed="0.230192"/>
+</for>
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.422956" elapsed="0.296516"/>
+</kw>
+<arg>${item}</arg>
+<arg>@{explorer_tree}</arg>
+<doc>Navigeer in storybook tree</doc>
+<status status="PASS" start="2024-03-11T11:54:00.192145" elapsed="0.527485"/>
+</kw>
+<kw name="Vergelijk Afbeelding" owner="image_compare">
+<kw name="Replace Spaces And Encode To ASCII" owner="general">
+<kw name="Replace String" owner="String">
+<msg time="2024-03-11T11:54:00.720722" level="INFO">${string_output} = confirm-modal</msg>
+<var>${string_output}</var>
+<arg>${string_input}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.720495" elapsed="0.000307"/>
+</kw>
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2024-03-11T11:54:00.721042" level="INFO">${string_output} = confirm-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<arg>errors=replace</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.720889" elapsed="0.000196"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2024-03-11T11:54:00.721303" level="INFO">${string_output} = confirm-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.721162" elapsed="0.000189"/>
+</kw>
+<return>
+<value>${string_output}</value>
+<status status="PASS" start="2024-03-11T11:54:00.721419" elapsed="0.000055"/>
+</return>
+<msg time="2024-03-11T11:54:00.721536" level="INFO">${image_test_id} = confirm-modal</msg>
+<var>${image_test_id}</var>
+<arg>${image_test_id}</arg>
+<doc>Maakt strings tot namen die gebruikt kunnen worden in bijvoorbeeld Path namen</doc>
+<status status="PASS" start="2024-03-11T11:54:00.720322" elapsed="0.001248"/>
+</kw>
+<if>
+<branch type="IF" condition="$image_index">
+<variable name="${image_path}">
+<var>${image_test_id}_${image_index}.png</var>
+<status status="PASS" start="2024-03-11T11:54:00.721740" elapsed="0.000080"/>
+</variable>
+<status status="PASS" start="2024-03-11T11:54:00.721634" elapsed="0.000214"/>
+</branch>
+<branch type="ELSE">
+<variable name="${image_path}">
+<var>${image_test_id}.png</var>
+<status status="NOT RUN" start="2024-03-11T11:54:00.721911" elapsed="0.000036"/>
+</variable>
+<status status="NOT RUN" start="2024-03-11T11:54:00.721870" elapsed="0.000104"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:00.721624" elapsed="0.000370"/>
+</if>
+<variable name="${image_reference_path}">
+<var>${REFERENCE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:00.722013" elapsed="0.000070"/>
+</variable>
+<variable name="${image_candidate_path}">
+<var>${CANDIDATE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:00.722108" elapsed="0.000058"/>
+</variable>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-03-11T11:54:00.788675" level="INFO">Text: 'Disclaimer\nSluiten\nSecundaire actie Bevestigen'</msg>
+<arg>${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.722240" elapsed="0.066580"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2024-03-11T11:54:00.789325" level="INFO">Waiting page load to state to receive load in 15000.0</msg>
+<msg time="2024-03-11T11:54:00.790603" level="INFO">Load state load got in 15000</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.788972" elapsed="0.001753"/>
+</kw>
+<if>
+<branch type="IF" condition="$REFERENCE_RUN">
+<kw name="Take Screenshot" owner="Browser">
+<arg>${image_reference_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-03-11T11:54:00.791010" elapsed="0.000110"/>
+</kw>
+<status status="NOT RUN" start="2024-03-11T11:54:00.790813" elapsed="0.000361"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-03-11T11:54:01.110520" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../data/image-compare/candidate/confirm-modal_dialog.png" target="_blank"&gt;&lt;img src="../data/image-compare/candidate/confirm-modal_dialog.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>${image_candidate_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-03-11T11:54:00.791278" elapsed="0.319501"/>
+</kw>
+<kw name="Compare Images" owner="ImageCompare">
+<msg time="2024-03-11T11:54:01.118975" level="INFO">Compare Image Object created in 0.0014 seconds
+Compare Image Object created in 0.0032 seconds</msg>
+<msg time="2024-03-11T11:54:01.118984" level="INFO" html="true">&lt;a href='screenshots/ab3e2554-df95-11ee-9e31-ea08b229c9f1_reference_page_1.jpg' target='_blank'&gt;&lt;img src='screenshots/ab3e2554-df95-11ee-9e31-ea08b229c9f1_reference_page_1.jpg' style='width:50%; height: auto;'/&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-11T11:54:01.118986" level="INFO" html="true">&lt;a href='screenshots/ab3e554c-df95-11ee-9e31-ea08b229c9f1_candidate_page_1.jpg' target='_blank'&gt;&lt;img src='screenshots/ab3e554c-df95-11ee-9e31-ea08b229c9f1_candidate_page_1.jpg' style='width:50%; height: auto;'/&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-11T11:54:01.119201" level="FAIL">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</msg>
+<arg>${image_reference_path}</arg>
+<arg>${image_candidate_path}</arg>
+<arg>threshold=${Threshold}</arg>
+<doc>Compares the documents/images ``reference_image`` and ``test_image``.</doc>
+<status status="FAIL" start="2024-03-11T11:54:01.110969" elapsed="0.009011">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</status>
+</kw>
+<status status="FAIL" start="2024-03-11T11:54:00.791199" elapsed="0.328932">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</status>
+</branch>
+<status status="FAIL" start="2024-03-11T11:54:00.790798" elapsed="0.329380">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</status>
+</if>
+<arg>${naam}</arg>
+<arg>${image_selector}</arg>
+<doc>Dit keyword schrijft screenshots weg in de 'actual' directory.
+iets</doc>
+<status status="FAIL" start="2024-03-11T11:54:00.719829" elapsed="0.400441">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</status>
+</kw>
+<arg>confirm-modal</arg>
+<arg>dialog</arg>
+<arg>confirm</arg>
+<arg>Modal</arg>
+<doc>Open boom en vergelijk</doc>
+<status status="FAIL" start="2024-03-11T11:54:00.191811" elapsed="0.928693">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</status>
+</kw>
+<kw name="Teardown Browser" owner="browser" type="TEARDOWN">
+<kw name="Get Console Log" owner="Browser">
+<msg time="2024-03-11T11:54:01.123091" level="INFO">Console log received</msg>
+<msg time="2024-03-11T11:54:01.123274" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<var>${console_log}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns the console log of the active page.</doc>
+<status status="PASS" start="2024-03-11T11:54:01.121466" elapsed="0.001885"/>
+</kw>
+<if>
+<branch type="IF" condition="$console_log">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-11T11:54:01.123807" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-11T10:53:59.004Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:59.293Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:59.299Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:59.366Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:59.379Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:59.379Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:53:59.380Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:53:59.746Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:53:59.747Z'}]</msg>
+<arg>console log output: ${console_log}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-11T11:54:01.123629" elapsed="0.000411"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:01.123463" elapsed="0.000644"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:01.123449" elapsed="0.000688"/>
+</if>
+<doc>Algemene Test Teardown</doc>
+<status status="PASS" start="2024-03-11T11:54:01.121171" elapsed="0.003005"/>
+</kw>
+<timeout value="5 minutes"/>
+<status status="FAIL" start="2024-03-11T11:53:57.864108" elapsed="3.260226">The compared images have different dimensions:
+reference:(143, 641, 3)
+candidate:(403, 641, 3)</status>
+</test>
+<test id="s1-s1-s1-t4" name="Visual loading-modal" line="24">
+<kw name="Open Storybook" owner="storybook" type="SETUP">
+<kw name="New Context" owner="Browser">
+<msg time="2024-03-11T11:54:01.126908" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "",
+  "viewport": {
+    "height": 1081,
+    "width": 1921
+  }
+}</msg>
+<msg time="2024-03-11T11:54:01.131460" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-11T11:54:01.131471" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<arg>viewport=${VIEWPORT_SIZE}</arg>
+<arg>tracing=${TRACING}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-03-11T11:54:01.126408" elapsed="0.005260"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<arg>New Page</arg>
+<arg>${STORYBOOK_URL}</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2024-03-11T11:54:01.131820" elapsed="0.012764"/>
+</kw>
+<kw name="Wait For All Promises" owner="Browser">
+<tag>Wait</tag>
+<doc>Waits for all promises to finish.</doc>
+<status status="PASS" start="2024-03-11T11:54:01.144835" elapsed="1.534749"/>
+</kw>
+<doc>Opent de storybook pagina</doc>
+<status status="PASS" start="2024-03-11T11:54:01.126201" elapsed="1.553555"/>
+</kw>
+<kw name="Explore Tree And Compare Image">
+<kw name="Navigeer In Explorer Tree" owner="storybook">
+<variable name="${css_sub_path}">
+<var>${PO_EXPLORER_TREE}</var>
+<status status="PASS" start="2024-03-11T11:54:02.680451" elapsed="0.000093"/>
+</variable>
+<variable name="${data_id}">
+<var>${EMPTY}</var>
+<status status="PASS" start="2024-03-11T11:54:02.680587" elapsed="0.000216"/>
+</variable>
+<for flavor="IN">
+<iter>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:02.701714" level="INFO">Attribute is: 'false'</msg>
+<msg time="2024-03-11T11:54:02.701943" level="INFO">${uitgeklapt} = false</msg>
+<var>${uitgeklapt}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>aria-expanded</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:02.681046" elapsed="0.020992"/>
+</kw>
+<if>
+<branch type="IF" condition="$uitgeklapt == 'false'">
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:02.702447" elapsed="0.209969"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:02.702170" elapsed="0.210369"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:02.702153" elapsed="0.210423"/>
+</if>
+<variable name="${css_sub_path}">
+<var>${css_sub_path}${SPACE}button:text-is("${stap}")</var>
+<status status="PASS" start="2024-03-11T11:54:02.912604" elapsed="0.000153"/>
+</variable>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:02.923347" level="INFO">Attribute is: 'html-css-modal'</msg>
+<msg time="2024-03-11T11:54:02.923521" level="INFO">${item_data_id} = html-css-modal</msg>
+<var>${item_data_id}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>data-item-id</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:02.912853" elapsed="0.010709"/>
+</kw>
+<var name="${stap}">Modal</var>
+<status status="PASS" start="2024-03-11T11:54:02.680956" elapsed="0.242699"/>
+</iter>
+<var>${stap}</var>
+<value>@{boom}</value>
+<status status="PASS" start="2024-03-11T11:54:02.680846" elapsed="0.242845"/>
+</for>
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:02.923777" elapsed="0.307964"/>
+</kw>
+<arg>${item}</arg>
+<arg>@{explorer_tree}</arg>
+<doc>Navigeer in storybook tree</doc>
+<status status="PASS" start="2024-03-11T11:54:02.680287" elapsed="0.551611"/>
+</kw>
+<kw name="Vergelijk Afbeelding" owner="image_compare">
+<kw name="Replace Spaces And Encode To ASCII" owner="general">
+<kw name="Replace String" owner="String">
+<msg time="2024-03-11T11:54:03.233089" level="INFO">${string_output} = loading-modal</msg>
+<var>${string_output}</var>
+<arg>${string_input}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.232905" elapsed="0.000264"/>
+</kw>
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2024-03-11T11:54:03.233407" level="INFO">${string_output} = loading-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<arg>errors=replace</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.233261" elapsed="0.000188"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2024-03-11T11:54:03.233646" level="INFO">${string_output} = loading-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.233521" elapsed="0.000159"/>
+</kw>
+<return>
+<value>${string_output}</value>
+<status status="PASS" start="2024-03-11T11:54:03.233726" elapsed="0.000053"/>
+</return>
+<msg time="2024-03-11T11:54:03.233843" level="INFO">${image_test_id} = loading-modal</msg>
+<var>${image_test_id}</var>
+<arg>${image_test_id}</arg>
+<doc>Maakt strings tot namen die gebruikt kunnen worden in bijvoorbeeld Path namen</doc>
+<status status="PASS" start="2024-03-11T11:54:03.232727" elapsed="0.001162"/>
+</kw>
+<if>
+<branch type="IF" condition="$image_index">
+<variable name="${image_path}">
+<var>${image_test_id}_${image_index}.png</var>
+<status status="PASS" start="2024-03-11T11:54:03.234066" elapsed="0.000075"/>
+</variable>
+<status status="PASS" start="2024-03-11T11:54:03.233958" elapsed="0.000211"/>
+</branch>
+<branch type="ELSE">
+<variable name="${image_path}">
+<var>${image_test_id}.png</var>
+<status status="NOT RUN" start="2024-03-11T11:54:03.234223" elapsed="0.000027"/>
+</variable>
+<status status="NOT RUN" start="2024-03-11T11:54:03.234188" elapsed="0.000082"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:03.233946" elapsed="0.000341"/>
+</if>
+<variable name="${image_reference_path}">
+<var>${REFERENCE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:03.234301" elapsed="0.000064"/>
+</variable>
+<variable name="${image_candidate_path}">
+<var>${CANDIDATE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:03.234390" elapsed="0.000058"/>
+</variable>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-03-11T11:54:03.292991" level="INFO">Text: ''</msg>
+<arg>${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.234517" elapsed="0.058618"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2024-03-11T11:54:03.293635" level="INFO">Waiting page load to state to receive load in 15000.0</msg>
+<msg time="2024-03-11T11:54:03.294746" level="INFO">Load state load got in 15000</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.293283" elapsed="0.001594"/>
+</kw>
+<if>
+<branch type="IF" condition="$REFERENCE_RUN">
+<kw name="Take Screenshot" owner="Browser">
+<arg>${image_reference_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-03-11T11:54:03.295180" elapsed="0.000068"/>
+</kw>
+<status status="NOT RUN" start="2024-03-11T11:54:03.294972" elapsed="0.000324"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-03-11T11:54:03.540202" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../data/image-compare/candidate/loading-modal_dialog.png" target="_blank"&gt;&lt;img src="../data/image-compare/candidate/loading-modal_dialog.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>${image_candidate_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.295398" elapsed="0.244964"/>
+</kw>
+<kw name="Compare Images" owner="ImageCompare">
+<msg time="2024-03-11T11:54:03.546653" level="INFO">Compare Image Object created in 0.0008 seconds
+Compare Image Object created in 0.0009 seconds
+The compared images are equal
+Visual Image comparison performed in 0.0044 seconds</msg>
+<arg>${image_reference_path}</arg>
+<arg>${image_candidate_path}</arg>
+<arg>threshold=${Threshold}</arg>
+<doc>Compares the documents/images ``reference_image`` and ``test_image``.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.540511" elapsed="0.006252"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:03.295323" elapsed="0.251529"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:03.294954" elapsed="0.251931"/>
+</if>
+<arg>${naam}</arg>
+<arg>${image_selector}</arg>
+<doc>Dit keyword schrijft screenshots weg in de 'actual' directory.
+iets</doc>
+<status status="PASS" start="2024-03-11T11:54:03.232213" elapsed="0.314706"/>
+</kw>
+<arg>loading-modal</arg>
+<arg>dialog</arg>
+<arg>loading</arg>
+<arg>Modal</arg>
+<doc>Open boom en vergelijk</doc>
+<status status="PASS" start="2024-03-11T11:54:02.679961" elapsed="0.867015"/>
+</kw>
+<kw name="Teardown Browser" owner="browser" type="TEARDOWN">
+<kw name="Get Console Log" owner="Browser">
+<msg time="2024-03-11T11:54:03.548701" level="INFO">Console log received</msg>
+<msg time="2024-03-11T11:54:03.548846" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<var>${console_log}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns the console log of the active page.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.547523" elapsed="0.001363"/>
+</kw>
+<if>
+<branch type="IF" condition="$console_log">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-11T11:54:03.549234" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-11T10:54:01.746Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:02.041Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:02.046Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:02.083Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:02.083Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:02.087Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:02.100Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:54:02.239Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:54:02.239Z'}]</msg>
+<arg>console log output: ${console_log}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.549108" elapsed="0.000288"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:03.548965" elapsed="0.000490"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:03.548953" elapsed="0.000535"/>
+</if>
+<doc>Algemene Test Teardown</doc>
+<status status="PASS" start="2024-03-11T11:54:03.547251" elapsed="0.002262"/>
+</kw>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2024-03-11T11:54:01.125658" elapsed="2.423954"/>
+</test>
+<test id="s1-s1-s1-t5" name="Visual with-datepicker-modal" line="25">
+<kw name="Open Storybook" owner="storybook" type="SETUP">
+<kw name="New Context" owner="Browser">
+<msg time="2024-03-11T11:54:03.552191" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "",
+  "viewport": {
+    "height": 1081,
+    "width": 1921
+  }
+}</msg>
+<msg time="2024-03-11T11:54:03.556302" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-11T11:54:03.556307" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<arg>viewport=${VIEWPORT_SIZE}</arg>
+<arg>tracing=${TRACING}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.551794" elapsed="0.004658"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<arg>New Page</arg>
+<arg>${STORYBOOK_URL}</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.556557" elapsed="0.011495"/>
+</kw>
+<kw name="Wait For All Promises" owner="Browser">
+<tag>Wait</tag>
+<doc>Waits for all promises to finish.</doc>
+<status status="PASS" start="2024-03-11T11:54:03.568291" elapsed="2.357855"/>
+</kw>
+<doc>Opent de storybook pagina</doc>
+<status status="PASS" start="2024-03-11T11:54:03.551590" elapsed="2.374718"/>
+</kw>
+<kw name="Explore Tree And Compare Image">
+<kw name="Navigeer In Explorer Tree" owner="storybook">
+<variable name="${css_sub_path}">
+<var>${PO_EXPLORER_TREE}</var>
+<status status="PASS" start="2024-03-11T11:54:05.926969" elapsed="0.000074"/>
+</variable>
+<variable name="${data_id}">
+<var>${EMPTY}</var>
+<status status="PASS" start="2024-03-11T11:54:05.927080" elapsed="0.000210"/>
+</variable>
+<for flavor="IN">
+<iter>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:05.950431" level="INFO">Attribute is: 'false'</msg>
+<msg time="2024-03-11T11:54:05.950635" level="INFO">${uitgeklapt} = false</msg>
+<var>${uitgeklapt}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>aria-expanded</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:05.927522" elapsed="0.023156"/>
+</kw>
+<if>
+<branch type="IF" condition="$uitgeklapt == 'false'">
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:05.951283" elapsed="0.213487"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:05.950843" elapsed="0.214054"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:05.950814" elapsed="0.214119"/>
+</if>
+<variable name="${css_sub_path}">
+<var>${css_sub_path}${SPACE}button:text-is("${stap}")</var>
+<status status="PASS" start="2024-03-11T11:54:06.164960" elapsed="0.000179"/>
+</variable>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:06.176838" level="INFO">Attribute is: 'html-css-modal'</msg>
+<msg time="2024-03-11T11:54:06.176999" level="INFO">${item_data_id} = html-css-modal</msg>
+<var>${item_data_id}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>data-item-id</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.165234" elapsed="0.011803"/>
+</kw>
+<var name="${stap}">Modal</var>
+<status status="PASS" start="2024-03-11T11:54:05.927440" elapsed="0.249686"/>
+</iter>
+<var>${stap}</var>
+<value>@{boom}</value>
+<status status="PASS" start="2024-03-11T11:54:05.927336" elapsed="0.249826"/>
+</for>
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.177246" elapsed="0.297870"/>
+</kw>
+<arg>${item}</arg>
+<arg>@{explorer_tree}</arg>
+<doc>Navigeer in storybook tree</doc>
+<status status="PASS" start="2024-03-11T11:54:05.926811" elapsed="0.548449"/>
+</kw>
+<kw name="Vergelijk Afbeelding" owner="image_compare">
+<kw name="Replace Spaces And Encode To ASCII" owner="general">
+<kw name="Replace String" owner="String">
+<msg time="2024-03-11T11:54:06.476580" level="INFO">${string_output} = with-datepicker-modal</msg>
+<var>${string_output}</var>
+<arg>${string_input}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.476180" elapsed="0.000487"/>
+</kw>
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2024-03-11T11:54:06.477078" level="INFO">${string_output} = with-datepicker-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<arg>errors=replace</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.476784" elapsed="0.000362"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2024-03-11T11:54:06.477463" level="INFO">${string_output} = with-datepicker-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.477256" elapsed="0.000250"/>
+</kw>
+<return>
+<value>${string_output}</value>
+<status status="PASS" start="2024-03-11T11:54:06.477561" elapsed="0.000123"/>
+</return>
+<msg time="2024-03-11T11:54:06.477756" level="INFO">${image_test_id} = with-datepicker-modal</msg>
+<var>${image_test_id}</var>
+<arg>${image_test_id}</arg>
+<doc>Maakt strings tot namen die gebruikt kunnen worden in bijvoorbeeld Path namen</doc>
+<status status="PASS" start="2024-03-11T11:54:06.475973" elapsed="0.001821"/>
+</kw>
+<if>
+<branch type="IF" condition="$image_index">
+<variable name="${image_path}">
+<var>${image_test_id}_${image_index}.png</var>
+<status status="PASS" start="2024-03-11T11:54:06.477979" elapsed="0.000080"/>
+</variable>
+<status status="PASS" start="2024-03-11T11:54:06.477866" elapsed="0.000226"/>
+</branch>
+<branch type="ELSE">
+<variable name="${image_path}">
+<var>${image_test_id}.png</var>
+<status status="NOT RUN" start="2024-03-11T11:54:06.478151" elapsed="0.000027"/>
+</variable>
+<status status="NOT RUN" start="2024-03-11T11:54:06.478114" elapsed="0.000086"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:06.477853" elapsed="0.000364"/>
+</if>
+<variable name="${image_reference_path}">
+<var>${REFERENCE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:06.478233" elapsed="0.000062"/>
+</variable>
+<variable name="${image_candidate_path}">
+<var>${CANDIDATE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:06.478321" elapsed="0.000051"/>
+</variable>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-03-11T11:54:06.543743" level="INFO">Text: 'Zet een datum\nSluiten'</msg>
+<arg>${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.478441" elapsed="0.065455"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2024-03-11T11:54:06.544440" level="INFO">Waiting page load to state to receive load in 15000.0</msg>
+<msg time="2024-03-11T11:54:06.545552" level="INFO">Load state load got in 15000</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.544065" elapsed="0.001611"/>
+</kw>
+<if>
+<branch type="IF" condition="$REFERENCE_RUN">
+<kw name="Take Screenshot" owner="Browser">
+<arg>${image_reference_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-03-11T11:54:06.545940" elapsed="0.000054"/>
+</kw>
+<status status="NOT RUN" start="2024-03-11T11:54:06.545757" elapsed="0.000278"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-03-11T11:54:06.884891" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../data/image-compare/candidate/with-datepicker-modal_dialog.png" target="_blank"&gt;&lt;img src="../data/image-compare/candidate/with-datepicker-modal_dialog.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>${image_candidate_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.546126" elapsed="0.339014"/>
+</kw>
+<kw name="Compare Images" owner="ImageCompare">
+<msg time="2024-03-11T11:54:06.896912" level="INFO">Compare Image Object created in 0.0016 seconds
+Compare Image Object created in 0.0015 seconds
+The compared images are equal
+Visual Image comparison performed in 0.0085 seconds</msg>
+<arg>${image_reference_path}</arg>
+<arg>${image_candidate_path}</arg>
+<arg>threshold=${Threshold}</arg>
+<doc>Compares the documents/images ``reference_image`` and ``test_image``.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.885417" elapsed="0.011639"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:06.546056" elapsed="0.351107"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:06.545743" elapsed="0.351458"/>
+</if>
+<arg>${naam}</arg>
+<arg>${image_selector}</arg>
+<doc>Dit keyword schrijft screenshots weg in de 'actual' directory.
+iets</doc>
+<status status="PASS" start="2024-03-11T11:54:06.475455" elapsed="0.421807"/>
+</kw>
+<arg>with-datepicker-modal</arg>
+<arg>dialog</arg>
+<arg>with datepicker</arg>
+<arg>Modal</arg>
+<doc>Open boom en vergelijk</doc>
+<status status="PASS" start="2024-03-11T11:54:05.926494" elapsed="0.970836"/>
+</kw>
+<kw name="Teardown Browser" owner="browser" type="TEARDOWN">
+<kw name="Get Console Log" owner="Browser">
+<msg time="2024-03-11T11:54:06.899497" level="INFO">Console log received</msg>
+<msg time="2024-03-11T11:54:06.899666" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<var>${console_log}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns the console log of the active page.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.898038" elapsed="0.001681"/>
+</kw>
+<if>
+<branch type="IF" condition="$console_log">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-11T11:54:06.900137" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-11T10:54:04.749Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:05.043Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:05.048Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:05.085Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:05.085Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:05.085Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:05.121Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:54:05.487Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:54:05.488Z'}]</msg>
+<arg>console log output: ${console_log}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.899984" elapsed="0.000307"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:06.899821" elapsed="0.000519"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:06.899806" elapsed="0.000561"/>
+</if>
+<doc>Algemene Test Teardown</doc>
+<status status="PASS" start="2024-03-11T11:54:06.897736" elapsed="0.002654"/>
+</kw>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2024-03-11T11:54:03.551067" elapsed="3.349504"/>
+</test>
+<test id="s1-s1-s1-t6" name="Visual fullscreen-modal" line="26">
+<kw name="Open Storybook" owner="storybook" type="SETUP">
+<kw name="New Context" owner="Browser">
+<msg time="2024-03-11T11:54:06.902922" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "tracing": "",
+  "viewport": {
+    "height": 1081,
+    "width": 1921
+  }
+}</msg>
+<msg time="2024-03-11T11:54:06.907664" level="INFO">Successfully created context. </msg>
+<msg time="2024-03-11T11:54:06.907676" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'tracing': '', 'viewport': {'height': 1081, 'width': 1921}}</msg>
+<arg>viewport=${VIEWPORT_SIZE}</arg>
+<arg>tracing=${TRACING}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.902550" elapsed="0.005384"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<arg>New Page</arg>
+<arg>${STORYBOOK_URL}</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.908141" elapsed="0.013517"/>
+</kw>
+<kw name="Wait For All Promises" owner="Browser">
+<tag>Wait</tag>
+<doc>Waits for all promises to finish.</doc>
+<status status="PASS" start="2024-03-11T11:54:06.921888" elapsed="1.909635"/>
+</kw>
+<doc>Opent de storybook pagina</doc>
+<status status="PASS" start="2024-03-11T11:54:06.902399" elapsed="1.929368"/>
+</kw>
+<kw name="Explore Tree And Compare Image">
+<kw name="Navigeer In Explorer Tree" owner="storybook">
+<variable name="${css_sub_path}">
+<var>${PO_EXPLORER_TREE}</var>
+<status status="PASS" start="2024-03-11T11:54:08.832514" elapsed="0.000081"/>
+</variable>
+<variable name="${data_id}">
+<var>${EMPTY}</var>
+<status status="PASS" start="2024-03-11T11:54:08.832636" elapsed="0.000232"/>
+</variable>
+<for flavor="IN">
+<iter>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:08.854950" level="INFO">Attribute is: 'false'</msg>
+<msg time="2024-03-11T11:54:08.855150" level="INFO">${uitgeklapt} = false</msg>
+<var>${uitgeklapt}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>aria-expanded</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:08.833100" elapsed="0.022094"/>
+</kw>
+<if>
+<branch type="IF" condition="$uitgeklapt == 'false'">
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:08.855649" elapsed="0.193608"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:08.855361" elapsed="0.194022"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:08.855342" elapsed="0.194078"/>
+</if>
+<variable name="${css_sub_path}">
+<var>${css_sub_path}${SPACE}button:text-is("${stap}")</var>
+<status status="PASS" start="2024-03-11T11:54:09.049448" elapsed="0.000188"/>
+</variable>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2024-03-11T11:54:09.058324" level="INFO">Attribute is: 'html-css-modal'</msg>
+<msg time="2024-03-11T11:54:09.058514" level="INFO">${item_data_id} = html-css-modal</msg>
+<var>${item_data_id}</var>
+<arg>${PO_EXPLORER_TREE} button:text-is("${stap}")</arg>
+<arg>data-item-id</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.049736" elapsed="0.008823"/>
+</kw>
+<var name="${stap}">Modal</var>
+<status status="PASS" start="2024-03-11T11:54:08.833015" elapsed="0.225637"/>
+</iter>
+<var>${stap}</var>
+<value>@{boom}</value>
+<status status="PASS" start="2024-03-11T11:54:08.832912" elapsed="0.225783"/>
+</for>
+<kw name="Click" owner="Browser">
+<arg>${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.058780" elapsed="0.296360"/>
+</kw>
+<arg>${item}</arg>
+<arg>@{explorer_tree}</arg>
+<doc>Navigeer in storybook tree</doc>
+<status status="PASS" start="2024-03-11T11:54:08.832345" elapsed="0.523014"/>
+</kw>
+<kw name="Vergelijk Afbeelding" owner="image_compare">
+<kw name="Replace Spaces And Encode To ASCII" owner="general">
+<kw name="Replace String" owner="String">
+<msg time="2024-03-11T11:54:09.356640" level="INFO">${string_output} = fullscreen-modal</msg>
+<var>${string_output}</var>
+<arg>${string_input}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.356275" elapsed="0.000457"/>
+</kw>
+<kw name="Encode String To Bytes" owner="String">
+<msg time="2024-03-11T11:54:09.356991" level="INFO">${string_output} = fullscreen-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<arg>errors=replace</arg>
+<doc>Encodes the given ``string`` to bytes using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.356843" elapsed="0.000190"/>
+</kw>
+<kw name="Decode Bytes To String" owner="String">
+<msg time="2024-03-11T11:54:09.357225" level="INFO">${string_output} = fullscreen-modal</msg>
+<var>${string_output}</var>
+<arg>${string_output}</arg>
+<arg>ASCII</arg>
+<doc>Decodes the given ``bytes`` to a string using the given ``encoding``.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.357108" elapsed="0.000166"/>
+</kw>
+<return>
+<value>${string_output}</value>
+<status status="PASS" start="2024-03-11T11:54:09.357334" elapsed="0.000058"/>
+</return>
+<msg time="2024-03-11T11:54:09.357456" level="INFO">${image_test_id} = fullscreen-modal</msg>
+<var>${image_test_id}</var>
+<arg>${image_test_id}</arg>
+<doc>Maakt strings tot namen die gebruikt kunnen worden in bijvoorbeeld Path namen</doc>
+<status status="PASS" start="2024-03-11T11:54:09.356098" elapsed="0.001391"/>
+</kw>
+<if>
+<branch type="IF" condition="$image_index">
+<variable name="${image_path}">
+<var>${image_test_id}_${image_index}.png</var>
+<status status="PASS" start="2024-03-11T11:54:09.357744" elapsed="0.000204"/>
+</variable>
+<status status="PASS" start="2024-03-11T11:54:09.357553" elapsed="0.000430"/>
+</branch>
+<branch type="ELSE">
+<variable name="${image_path}">
+<var>${image_test_id}.png</var>
+<status status="NOT RUN" start="2024-03-11T11:54:09.358052" elapsed="0.000039"/>
+</variable>
+<status status="NOT RUN" start="2024-03-11T11:54:09.358009" elapsed="0.000103"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:09.357543" elapsed="0.000586"/>
+</if>
+<variable name="${image_reference_path}">
+<var>${REFERENCE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:09.358144" elapsed="0.000107"/>
+</variable>
+<variable name="${image_candidate_path}">
+<var>${CANDIDATE_DIR}${image_path}</var>
+<status status="PASS" start="2024-03-11T11:54:09.358277" elapsed="0.000051"/>
+</variable>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-03-11T11:54:09.426676" level="INFO">Text: 'Fullscreen\nSluiten'</msg>
+<arg>${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.358388" elapsed="0.068445"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2024-03-11T11:54:09.427371" level="INFO">Waiting page load to state to receive load in 15000.0</msg>
+<msg time="2024-03-11T11:54:09.428636" level="INFO">Load state load got in 15000</msg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.426993" elapsed="0.001769"/>
+</kw>
+<if>
+<branch type="IF" condition="$REFERENCE_RUN">
+<kw name="Take Screenshot" owner="Browser">
+<arg>${image_reference_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-03-11T11:54:09.429052" elapsed="0.000112"/>
+</kw>
+<status status="NOT RUN" start="2024-03-11T11:54:09.428848" elapsed="0.000369"/>
+</branch>
+<branch type="ELSE">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-03-11T11:54:10.013264" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../data/image-compare/candidate/fullscreen-modal_dialog.png" target="_blank"&gt;&lt;img src="../data/image-compare/candidate/fullscreen-modal_dialog.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>${image_candidate_path}</arg>
+<arg>${selector}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-03-11T11:54:09.429327" elapsed="0.584128"/>
+</kw>
+<kw name="Compare Images" owner="ImageCompare">
+<msg time="2024-03-11T11:54:10.079196" level="INFO">Compare Image Object created in 0.0087 seconds
+Compare Image Object created in 0.0090 seconds
+The compared images are equal
+Visual Image comparison performed in 0.0551 seconds</msg>
+<arg>${image_reference_path}</arg>
+<arg>${image_candidate_path}</arg>
+<arg>threshold=${Threshold}</arg>
+<doc>Compares the documents/images ``reference_image`` and ``test_image``.</doc>
+<status status="PASS" start="2024-03-11T11:54:10.013639" elapsed="0.065707"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:09.429245" elapsed="0.650190"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:09.428833" elapsed="0.650632"/>
+</if>
+<arg>${naam}</arg>
+<arg>${image_selector}</arg>
+<doc>Dit keyword schrijft screenshots weg in de 'actual' directory.
+iets</doc>
+<status status="PASS" start="2024-03-11T11:54:09.355613" elapsed="0.723886"/>
+</kw>
+<arg>fullscreen-modal</arg>
+<arg>dialog</arg>
+<arg>fullscreen</arg>
+<arg>Modal</arg>
+<doc>Open boom en vergelijk</doc>
+<status status="PASS" start="2024-03-11T11:54:08.831994" elapsed="1.247557"/>
+</kw>
+<kw name="Teardown Browser" owner="browser" type="TEARDOWN">
+<kw name="Get Console Log" owner="Browser">
+<msg time="2024-03-11T11:54:10.081435" level="INFO">Console log received</msg>
+<msg time="2024-03-11T11:54:10.081596" level="INFO">${console_log} = [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.1...</msg>
+<var>${console_log}</var>
+<tag>Assertion</tag>
+<tag>BrowserControl</tag>
+<tag>Getter</tag>
+<doc>Returns the console log of the active page.</doc>
+<status status="PASS" start="2024-03-11T11:54:10.080116" elapsed="0.001523"/>
+</kw>
+<if>
+<branch type="IF" condition="$console_log">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-11T11:54:10.082076" level="INFO">console log output: [{'type': 'info', 'text': '%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/sb-manager/chunk-NFZCBIX3.js', 'lineNumber': 140, 'columnNumber': 16381}, 'time': '2024-03-11T10:54:07.459Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:07.748Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/index.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:07.754Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:07.791Z'}, {'type': 'error', 'text': "Refused to execute script from 'https://storybook.dso-toolkit.nl/62.13.0/iframe-resizer/iframeResizer.contentWindow.min.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/iframe.html?viewMode=story&amp;id=*', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:07.791Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!angular/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:07.792Z'}, {'type': 'error', 'text': 'Failed to load resource: the server responded with a status of 404 ()', 'location': {'url': 'https://storybook.dso-toolkit.nl/!react/62.13.0/metadata.json', 'lineNumber': 0, 'columnNumber': 0}, 'time': '2024-03-11T10:54:07.804Z'}, {'type': 'log', 'text': "Unknown key 'highlightObject' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:54:07.939Z'}, {'type': 'log', 'text': "Unknown key 'highlightStyle' exported by preview annotation file '/usr/src/app/node_modules/@storybook/addon-essentials/dist/highlight/preview.mjs'", 'location': {'url': 'https://storybook.dso-toolkit.nl/62.13.0/867.8927bb9a.iframe.bundle.js', 'lineNumber': 8, 'columnNumber': 12426}, 'time': '2024-03-11T10:54:07.940Z'}]</msg>
+<arg>console log output: ${console_log}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-11T11:54:10.081930" elapsed="0.000298"/>
+</kw>
+<status status="PASS" start="2024-03-11T11:54:10.081738" elapsed="0.000535"/>
+</branch>
+<status status="PASS" start="2024-03-11T11:54:10.081724" elapsed="0.000573"/>
+</if>
+<doc>Algemene Test Teardown</doc>
+<status status="PASS" start="2024-03-11T11:54:10.079840" elapsed="0.002479"/>
+</kw>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2024-03-11T11:54:06.901868" elapsed="3.180526"/>
 </test>
 <doc>algehele import iets</doc>
-<status status="PASS" start="2024-03-05T15:06:06.682993" elapsed="2.010599"/>
+<status status="FAIL" start="2024-03-11T11:53:51.252449" elapsed="18.831169"/>
 </suite>
 <doc>Alkgemene setttings voor suite setup en teardown</doc>
-<status status="PASS" start="2024-03-05T15:06:05.138983" elapsed="3.608650"/>
+<status status="FAIL" start="2024-03-11T11:53:49.619553" elapsed="20.786407"/>
 </suite>
-<status status="PASS" start="2024-03-05T15:06:05.119856" elapsed="3.630192"/>
+<status status="FAIL" start="2024-03-11T11:53:49.602132" elapsed="20.805888"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Dso-Toolkit-Browser-Test">Dso-Toolkit-Browser-Test</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Dso-Toolkit-Browser-Test.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Storybook">Dso-Toolkit-Browser-Test.Tests.Storybook</stat>
+<stat pass="4" fail="2" skip="0" id="s1" name="Dso-Toolkit-Browser-Test">Dso-Toolkit-Browser-Test</stat>
+<stat pass="4" fail="2" skip="0" id="s1-s1" name="Tests">Dso-Toolkit-Browser-Test.Tests</stat>
+<stat pass="4" fail="2" skip="0" id="s1-s1-s1" name="Storybook Image Compare Dd">Dso-Toolkit-Browser-Test.Tests.Storybook Image Compare Dd</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-03-11T11:53:51.762361" level="ERROR">[ DataDriver ] Error in robot file:
+  File "/Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests/storybook_image_compare_dd.robot", line 0</msg>
+<msg time="2024-03-11T11:53:51.763606" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was empty. Tried to find /Users/a.j.vaniperen/kadaster/projecten/dso-toolkit-browser-test/tests/storybook_image_compare_dd.csv but file does not exist. If no file validation is required, set file_search_strategy=None.</msg>
 </errors>
 </robot>

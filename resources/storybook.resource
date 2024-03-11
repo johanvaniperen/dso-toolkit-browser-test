@@ -21,3 +21,18 @@ Open Storybook
 Explorer Tree Wordt Getoond
     [Documentation]    Verifeer Explorer Tree
     Get Text    ${PO_EXPLORER_TREE}
+
+Navigeer In Explorer Tree
+    [Documentation]    Navigeer in storybook tree
+    [Arguments]    ${item}=default    @{boom}
+    VAR    ${css_sub_path}    ${PO_EXPLORER_TREE}
+    VAR    ${data_id}    ${EMPTY}
+    FOR    ${stap}    IN    @{boom}
+        ${uitgeklapt}    Get Attribute    ${PO_EXPLORER_TREE} button:text-is("${stap}")    aria-expanded
+        IF    $uitgeklapt == 'false'
+            Click    ${PO_EXPLORER_TREE} button:text-is("${stap}")
+        END
+        VAR    ${css_sub_path}    ${css_sub_path}${SPACE}button:text-is("${stap}")
+        ${item_data_id}    Get Attribute    ${PO_EXPLORER_TREE} button:text-is("${stap}")     data-item-id
+    END
+    Click    ${PO_EXPLORER_TREE} div a[id*="${item_data_id}--"]:text-is("${item}")

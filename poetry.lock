@@ -26,6 +26,17 @@ files = [
 ]
 
 [[package]]
+name = "docutils"
+version = "0.20.1"
+description = "Docutils -- Python Documentation Utilities"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "docutils-0.20.1-py3-none-any.whl", hash = "sha256:96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6"},
+    {file = "docutils-0.20.1.tar.gz", hash = "sha256:f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b"},
+]
+
+[[package]]
 name = "grpcio"
 version = "1.60.1"
 description = "HTTP/2-based RPC framework"
@@ -706,6 +717,25 @@ typing-extensions = ">=4.5.0"
 wrapt = ">=1.15.0"
 
 [[package]]
+name = "robotframework-datadriver"
+version = "1.11.0"
+description = "A library for Data-Driven Testing."
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "robotframework-datadriver-1.11.0.tar.gz", hash = "sha256:adb6a763bbef2eff98e31b4c4891bb71c567f0dcc691ec03fbb79d80b7eaaa45"},
+    {file = "robotframework_datadriver-1.11.0-py3-none-any.whl", hash = "sha256:7de5e9b0fc0d03d32b7685a2fbd003c513f278442205d2e7220afa8fc2ffd4f3"},
+]
+
+[package.dependencies]
+docutils = "*"
+Pygments = "*"
+robotframework = ">=4.0.2,<8.0"
+
+[package.extras]
+xls = ["openpyxl", "pandas", "xlrd (>=1.2.0)"]
+
+[[package]]
 name = "robotframework-imagecompare"
 version = "0.2.0"
 description = "A Robot Framework Library for image comparisons"
@@ -1025,4 +1055,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "b744baeda2f04e49d7eb5d577d4f3a246e7d267a7dcf4befb96689bf8a57dd18"
+content-hash = "d7b0eb98f05f7c9ad2b8a29f184769218a686be90341eef349510e227c2e9258"
